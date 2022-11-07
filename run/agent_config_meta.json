@@ -1,0 +1,463 @@
+{
+  "keys": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+  "middleware": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+  "logger": {
+    "dir": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "encoding": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "env": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "level": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "enablePerformanceTimer": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+  },
+  "redis": {
+    "client": {
+      "port": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "host": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "password": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "db": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js"
+    },
+    "default": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-redis/config/config.default.js",
+    "app": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-redis/config/config.default.js",
+    "agent": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-redis/config/config.default.js",
+    "supportTimeCommand": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-redis/config/config.default.js"
+  },
+  "redlock9": {
+    "logger": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "options": {
+      "driftFactor": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "retryCount": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "retryDelay": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "retryJitter": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js"
+    }
+  },
+  "sequelize": {
+    "dialect": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "host": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "port": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "username": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "password": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "database": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "define": {
+      "timestamps": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "paranoid": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "freezeTableName": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "underscored": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js"
+    },
+    "timezone": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "dialectOptions": {
+      "dateStrings": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "typeCast": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js"
+    },
+    "operatorsAliases": {
+      "$eq": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$ne": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$gte": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$gt": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$lte": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$lt": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$not": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$in": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$notIn": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$is": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$like": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$notLike": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$iLike": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$notILike": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$regexp": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$notRegexp": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$iRegexp": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$notIRegexp": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$between": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$notBetween": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$overlap": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$contains": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$contained": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$adjacent": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$strictLeft": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$strictRight": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$noExtendRight": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$noExtendLeft": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$and": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$or": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$any": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$all": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$values": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "$col": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js"
+    }
+  },
+  "cluster": {
+    "listen": {
+      "port": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+      "path": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "hostname": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    }
+  },
+  "validate": {
+    "translate": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js"
+  },
+  "multipart": {
+    "fileExtensions": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "fileSize": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "mode": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "autoFields": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-multipart/config/config.default.js",
+    "allowArrayField": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-multipart/config/config.default.js",
+      "disable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-multipart/config/config.default.js"
+    }
+  },
+  "security": {
+    "csrf": {
+      "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "ignoreJSON": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+      "type": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "useSession": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "supportedRequests": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "refererWhiteList": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+    },
+    "domainWhiteList": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "protocolWhiteList": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "ipExceptionList": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "cors": {
+    "origin": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js",
+    "allowMethods": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.default.js"
+  },
+  "swaggerdoc": {
+    "dirScanner": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+    "basePath": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+    "apiInfo": {
+      "title": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+      "description": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+      "version": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+      "docExpansion": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js"
+    },
+    "schemes": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+    "consumes": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+    "produces": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+    "securityDefinitions": {
+      "x-token": {
+        "type": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+        "name": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+        "in": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js"
+      }
+    },
+    "enableSecurity": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+    "enableValidate": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+    "routerMap": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+    "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+    "docExpansion": "/Users/bolide/Downloads/jingjingcaiyuan-server/config/config.local.js",
+    "type": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-swagger-doc-feat/config/config.default.js",
+    "itemType": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-swagger-doc-feat/config/config.default.js"
+  },
+  "session": {
+    "maxAge": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-session/config/config.default.js",
+    "logValue": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-session/config/config.default.js"
+  },
+  "helper": {
+    "shtml": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-i18n/config/config.default.js",
+    "cookieDomain": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-watcher/config/config.default.js",
+      "development": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-schedule/config/config.default.js",
+      "file": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-schedule/config/config.default.js"
+  },
+  "development": {
+    "watchDirs": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-development/config/config.default.js",
+    "ignoreDirs": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-development/config/config.default.js",
+    "fastReady": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-development/config/config.default.js",
+    "overrideDefault": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-development/config/config.default.js",
+    "overrideIgnore": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-development/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-static/config/config.default.js",
+    "dir": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-static/config/config.default.js",
+    "dynamic": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-static/config/config.default.js",
+    "preload": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-static/config/config.default.js",
+    "buffer": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-static/config/config.default.js",
+    "maxFiles": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-static/config/config.default.js"
+  },
+  "view": {
+    "root": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-view/config/config.default.js",
+    "cache": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-view/config/config.local.js",
+    "defaultExtension": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-view/config/config.default.js",
+    "mapping": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-view/config/config.default.js"
+  },
+  "mysql": {
+    "default": {
+      "database": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-mysql/config/config.default.js",
+      "connectionLimit": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-mysql/config/config.default.js"
+    },
+    "app": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-mysql/config/config.default.js",
+    "agent": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg-mysql/config/config.default.js"
+  },
+  "env": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "name": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "cookies": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "proxy": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "maxIpsCount": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "maxProxyCount": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "version": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "description": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "private": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "egg": {
+      "declarations": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    },
+    "dependencies": {
+      "@baiducloud/sdk": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "axios": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "bufferhelper": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "child_process": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "crypto-js": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "dayjs": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg-cors": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg-mysql": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg-redis": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg-redlock-9": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg-sequelize": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg-swagger-doc-feat": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg-validate": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "https": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "i18n": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "iconv-lite": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "jsonwebtoken": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "mysql2": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "sequelize-automate": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "stream-to-array": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "uuid": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "autod": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "autod-egg": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "babel-core": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-runtime": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "babel-preset-es2015": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "babelify": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "biguint-format": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "browserify": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "crypto": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "deepmerge": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg-bin": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg-ci": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "egg-mock": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "eslint": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "flake-idgen": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "fs-extra": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "handlebars": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "node-rsa": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "selfsigned": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "sequelize-auto": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "sequelize-cli": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "vue": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "vueify": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    },
+    "scripts": {
+      "start": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "start:test": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "start:k8s": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "stop": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "stop:test": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "dev": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "debug": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "test": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "test-local": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "cov": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "lint": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "ci": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "autod": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "admin": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "generate": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "sequelize-automate": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "url": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    },
+    "author": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "license": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+  },
+  "baseDir": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "HOME": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "rundir": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "notFound": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "sitefile": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "middlewares": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "httpClient": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "cacheControl": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "formLimit": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "textLimit": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "strict": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "depth": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    },
+    "onerror": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "logging": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "serverTimeout": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+  "clusterClient": {
+    "maxWaitTime": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/Users/bolide/Downloads/jingjingcaiyuan-server/node_modules/egg/config/config.default.js"
+}

@@ -1,0 +1,170 @@
+2022-11-07 13:57:14,258 INFO 6495 [egg:logger] init all loggers with options: {"dir":"/Users/bolide/Downloads/jingjingcaiyuan-server/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"org-feishu-employees-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-11-07 13:57:14,288 INFO 6495 [egg-multipart] file mode enable
+2022-11-07 13:57:14,288 INFO 6495 [egg-multipart] will save temporary files to "/var/folders/fn/ls7hl8q9137d3gq2g9170k080000gp/T/egg-multipart-tmp/org-feishu-employees", cleanup job cron: "0 30 4 * * *"
+2022-11-07 13:57:14,415 INFO 6495 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2022-11-07 13:57:14,516 INFO 6495 [egg-static] starting static serve /public/ -> /Users/bolide/Downloads/jingjingcaiyuan-server/app/public
+2022-11-07 13:57:14,519 INFO 6495 [egg-security] use methodnoallow middleware
+2022-11-07 13:57:14,519 INFO 6495 [egg-security] use noopen middleware
+2022-11-07 13:57:14,520 INFO 6495 [egg-security] use nosniff middleware
+2022-11-07 13:57:14,521 INFO 6495 [egg-security] use xssProtection middleware
+2022-11-07 13:57:14,521 INFO 6495 [egg-security] use xframe middleware
+2022-11-07 13:57:14,522 INFO 6495 [egg-security] use dta middleware
+2022-11-07 13:57:14,522 INFO 6495 [egg-security] compose 6 middlewares into one security middleware
+2022-11-07 13:57:14,638 INFO 6495 [egg:core] dump config after load, 6ms
+2022-11-07 13:57:14,674 ERROR 6495 [egg-redis] client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+2022-11-07 13:57:14,675 ERROR 6495 nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 6495
+hostname: dabaozongdeMacBook-Pro.local
+
+2022-11-07 13:57:14,687 INFO 6495 [egg:core] dump config after ready, 6ms
+2022-11-07 13:57:14,695 INFO 6495 [egg-watcher:application] watcher start success
+2022-11-07 13:58:10,945 INFO 6552 [egg:logger] init all loggers with options: {"dir":"/Users/bolide/Downloads/jingjingcaiyuan-server/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"org-feishu-employees-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-11-07 13:58:10,976 INFO 6552 [egg-multipart] file mode enable
+2022-11-07 13:58:10,976 INFO 6552 [egg-multipart] will save temporary files to "/var/folders/fn/ls7hl8q9137d3gq2g9170k080000gp/T/egg-multipart-tmp/org-feishu-employees", cleanup job cron: "0 30 4 * * *"
+2022-11-07 13:58:11,102 INFO 6552 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2022-11-07 13:58:11,204 INFO 6552 [egg-static] starting static serve /public/ -> /Users/bolide/Downloads/jingjingcaiyuan-server/app/public
+2022-11-07 13:58:11,207 INFO 6552 [egg-security] use methodnoallow middleware
+2022-11-07 13:58:11,207 INFO 6552 [egg-security] use noopen middleware
+2022-11-07 13:58:11,208 INFO 6552 [egg-security] use nosniff middleware
+2022-11-07 13:58:11,209 INFO 6552 [egg-security] use xssProtection middleware
+2022-11-07 13:58:11,209 INFO 6552 [egg-security] use xframe middleware
+2022-11-07 13:58:11,210 INFO 6552 [egg-security] use dta middleware
+2022-11-07 13:58:11,210 INFO 6552 [egg-security] compose 6 middlewares into one security middleware
+2022-11-07 13:58:11,310 INFO 6552 [egg:core] dump config after load, 6ms
+2022-11-07 13:58:11,345 ERROR 6552 [egg-redis] client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+2022-11-07 13:58:11,345 ERROR 6552 nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 6552
+hostname: dabaozongdeMacBook-Pro.local
+
+2022-11-07 13:58:11,357 INFO 6552 [egg:core] dump config after ready, 6ms
+2022-11-07 13:58:11,365 INFO 6552 [egg-watcher:application] watcher start success
+2022-11-07 14:00:09,165 INFO 6681 [egg:logger] init all loggers with options: {"dir":"/Users/bolide/Downloads/jingjingcaiyuan-server/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"org-feishu-employees-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-11-07 14:00:09,195 INFO 6681 [egg-multipart] file mode enable
+2022-11-07 14:00:09,195 INFO 6681 [egg-multipart] will save temporary files to "/var/folders/fn/ls7hl8q9137d3gq2g9170k080000gp/T/egg-multipart-tmp/org-feishu-employees", cleanup job cron: "0 30 4 * * *"
+2022-11-07 14:00:09,326 INFO 6681 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2022-11-07 14:00:09,431 INFO 6681 [egg-static] starting static serve /public/ -> /Users/bolide/Downloads/jingjingcaiyuan-server/app/public
+2022-11-07 14:00:09,433 INFO 6681 [egg-security] use methodnoallow middleware
+2022-11-07 14:00:09,434 INFO 6681 [egg-security] use noopen middleware
+2022-11-07 14:00:09,435 INFO 6681 [egg-security] use nosniff middleware
+2022-11-07 14:00:09,435 INFO 6681 [egg-security] use xssProtection middleware
+2022-11-07 14:00:09,436 INFO 6681 [egg-security] use xframe middleware
+2022-11-07 14:00:09,436 INFO 6681 [egg-security] use dta middleware
+2022-11-07 14:00:09,436 INFO 6681 [egg-security] compose 6 middlewares into one security middleware
+2022-11-07 14:00:09,525 INFO 6681 [egg:core] dump config after load, 5ms
+2022-11-07 14:00:09,594 ERROR 6681 [egg-redis] client error: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
+  errno: -61,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379
+}
+2022-11-07 14:00:09,594 ERROR 6681 nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 6681
+hostname: dabaozongdeMacBook-Pro.local
+
+2022-11-07 14:00:09,606 INFO 6681 [egg:core] dump config after ready, 6ms
+2022-11-07 14:00:09,612 INFO 6681 [egg-watcher:application] watcher start success
+2022-11-07 15:13:54,402 INFO 14319 [egg:logger] init all loggers with options: {"dir":"/Users/bolide/Downloads/jingjingcaiyuan-server/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"org-feishu-employees-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-11-07 15:13:54,433 INFO 14319 [egg-multipart] file mode enable
+2022-11-07 15:13:54,433 INFO 14319 [egg-multipart] will save temporary files to "/var/folders/fn/ls7hl8q9137d3gq2g9170k080000gp/T/egg-multipart-tmp/org-feishu-employees", cleanup job cron: "0 30 4 * * *"
+2022-11-07 15:13:54,566 INFO 14319 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2022-11-07 15:13:54,667 INFO 14319 [egg-static] starting static serve /public/ -> /Users/bolide/Downloads/jingjingcaiyuan-server/app/public
+2022-11-07 15:13:54,669 INFO 14319 [egg-security] use methodnoallow middleware
+2022-11-07 15:13:54,670 INFO 14319 [egg-security] use noopen middleware
+2022-11-07 15:13:54,671 INFO 14319 [egg-security] use nosniff middleware
+2022-11-07 15:13:54,671 INFO 14319 [egg-security] use xssProtection middleware
+2022-11-07 15:13:54,672 INFO 14319 [egg-security] use xframe middleware
+2022-11-07 15:13:54,673 INFO 14319 [egg-security] use dta middleware
+2022-11-07 15:13:54,673 INFO 14319 [egg-security] compose 6 middlewares into one security middleware
+2022-11-07 15:13:54,776 INFO 14319 [egg:core] dump config after load, 6ms
+2022-11-07 15:13:54,848 INFO 14319 [egg-redis] client connect success
+2022-11-07 15:13:54,854 INFO 14319 [egg-redis] instance[0] status OK, client ready
+2022-11-07 15:13:54,856 INFO 14319 [egg-watcher:application] watcher start success
+2022-11-07 15:13:55,772 INFO 14319 [egg:core] dump config after ready, 7ms
+2022-11-07 15:26:36,229 INFO 14734 [egg:logger] init all loggers with options: {"dir":"/Users/bolide/Downloads/jingjingcaiyuan-server/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"org-feishu-employees-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-11-07 15:26:36,256 INFO 14734 [egg-multipart] file mode enable
+2022-11-07 15:26:36,256 INFO 14734 [egg-multipart] will save temporary files to "/var/folders/fn/ls7hl8q9137d3gq2g9170k080000gp/T/egg-multipart-tmp/org-feishu-employees", cleanup job cron: "0 30 4 * * *"
+2022-11-07 15:26:36,390 INFO 14734 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2022-11-07 15:26:36,605 INFO 14734 [egg-static] starting static serve /public/ -> /Users/bolide/Downloads/jingjingcaiyuan-server/app/public
+2022-11-07 15:26:36,608 INFO 14734 [egg-security] use methodnoallow middleware
+2022-11-07 15:26:36,609 INFO 14734 [egg-security] use noopen middleware
+2022-11-07 15:26:36,610 INFO 14734 [egg-security] use nosniff middleware
+2022-11-07 15:26:36,610 INFO 14734 [egg-security] use xssProtection middleware
+2022-11-07 15:26:36,611 INFO 14734 [egg-security] use xframe middleware
+2022-11-07 15:26:36,612 INFO 14734 [egg-security] use dta middleware
+2022-11-07 15:26:36,612 INFO 14734 [egg-security] compose 6 middlewares into one security middleware
+2022-11-07 15:26:36,795 INFO 14734 [egg:core] dump config after load, 11ms
+2022-11-07 15:26:36,872 INFO 14734 [egg-redis] client connect success
+2022-11-07 15:26:36,879 INFO 14734 [egg-redis] instance[0] status OK, client ready
+2022-11-07 15:26:36,881 INFO 14734 [egg-watcher:application] watcher start success
+2022-11-07 15:26:37,646 INFO 14734 [egg:core] dump config after ready, 7ms
+2022-11-07 15:27:03,825 INFO 14765 [egg:logger] init all loggers with options: {"dir":"/Users/bolide/Downloads/jingjingcaiyuan-server/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"org-feishu-employees-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-11-07 15:27:03,858 INFO 14765 [egg-multipart] file mode enable
+2022-11-07 15:27:03,859 INFO 14765 [egg-multipart] will save temporary files to "/var/folders/fn/ls7hl8q9137d3gq2g9170k080000gp/T/egg-multipart-tmp/org-feishu-employees", cleanup job cron: "0 30 4 * * *"
+2022-11-07 15:27:04,017 INFO 14765 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2022-11-07 15:27:04,133 INFO 14765 [egg-static] starting static serve /public/ -> /Users/bolide/Downloads/jingjingcaiyuan-server/app/public
+2022-11-07 15:27:04,136 INFO 14765 [egg-security] use methodnoallow middleware
+2022-11-07 15:27:04,136 INFO 14765 [egg-security] use noopen middleware
+2022-11-07 15:27:04,137 INFO 14765 [egg-security] use nosniff middleware
+2022-11-07 15:27:04,138 INFO 14765 [egg-security] use xssProtection middleware
+2022-11-07 15:27:04,139 INFO 14765 [egg-security] use xframe middleware
+2022-11-07 15:27:04,139 INFO 14765 [egg-security] use dta middleware
+2022-11-07 15:27:04,140 INFO 14765 [egg-security] compose 6 middlewares into one security middleware
+2022-11-07 15:27:04,286 INFO 14765 [egg:core] dump config after load, 6ms
+2022-11-07 15:27:04,361 INFO 14765 [egg-redis] client connect success
+2022-11-07 15:27:04,370 INFO 14765 [egg-redis] instance[0] status OK, client ready
+2022-11-07 15:27:04,372 INFO 14765 [egg-watcher:application] watcher start success
+2022-11-07 15:27:07,506 INFO 14765 [egg:core] dump config after ready, 9ms
+2022-11-07 15:27:08,802 INFO 14804 [egg:logger] init all loggers with options: {"dir":"/Users/bolide/Downloads/jingjingcaiyuan-server/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"org-feishu-employees-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"application"}
+2022-11-07 15:27:08,830 INFO 14804 [egg-multipart] file mode enable
+2022-11-07 15:27:08,830 INFO 14804 [egg-multipart] will save temporary files to "/var/folders/fn/ls7hl8q9137d3gq2g9170k080000gp/T/egg-multipart-tmp/org-feishu-employees", cleanup job cron: "0 30 4 * * *"
+2022-11-07 15:27:08,957 INFO 14804 [egg-redis] server connecting redis://:***@127.0.0.1:6379/0
+2022-11-07 15:27:09,048 INFO 14804 [egg-static] starting static serve /public/ -> /Users/bolide/Downloads/jingjingcaiyuan-server/app/public
+2022-11-07 15:27:09,050 INFO 14804 [egg-security] use methodnoallow middleware
+2022-11-07 15:27:09,051 INFO 14804 [egg-security] use noopen middleware
+2022-11-07 15:27:09,051 INFO 14804 [egg-security] use nosniff middleware
+2022-11-07 15:27:09,052 INFO 14804 [egg-security] use xssProtection middleware
+2022-11-07 15:27:09,052 INFO 14804 [egg-security] use xframe middleware
+2022-11-07 15:27:09,053 INFO 14804 [egg-security] use dta middleware
+2022-11-07 15:27:09,053 INFO 14804 [egg-security] compose 6 middlewares into one security middleware
+2022-11-07 15:27:09,143 INFO 14804 [egg:core] dump config after load, 6ms
+2022-11-07 15:27:09,313 INFO 14804 [egg-redis] client connect success
+2022-11-07 15:27:09,337 INFO 14804 [egg-redis] instance[0] status OK, client ready
+2022-11-07 15:27:09,342 INFO 14804 [egg-watcher:application] watcher start success
+2022-11-07 15:27:12,366 INFO 14804 [egg:core] dump config after ready, 6ms
