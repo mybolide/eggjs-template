@@ -21,8 +21,8 @@ module.exports = appInfo => {
     dirScanner: './app/controller',
     basePath: '',
     apiInfo: {
-      title: '超境汽车',
-      description: '超境汽车',
+      title: 'swagger汽车',
+      description: 'swagger汽车',
       version: '1.0.0',
     },
     schemes: ['http', 'https'],
