@@ -1,5 +1,6 @@
 /* eslint valid-jsdoc: "off" */
 
+const I18n = require('i18n');
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
@@ -10,6 +11,13 @@ module.exports = appInfo => {
    * @type {Egg.EggAppConfig}
    **/
   const config = exports = {};
+
+  // 初始化 I18n 配置
+  I18n.configure({
+    locales: ['zh-CN', 'en-US'],
+    defaultLocale: 'zh-CN',
+    directory: require('path').join(__dirname, 'locale'),
+  });
 
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1750057225659_1070';
@@ -23,8 +31,13 @@ module.exports = appInfo => {
       enable: false
     },
   };
-  config.i18n = {
-    defaultLocale: 'zh-CN',
+
+  // 配置 validate 插件使用 i18n 翻译
+  config.validate = {
+    translate() {
+      const args = Array.prototype.slice.call(arguments);
+      return I18n.__.apply(I18n, args);
+    }
   };
 
   // sequelize 配置

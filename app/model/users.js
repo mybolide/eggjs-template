@@ -10,16 +10,16 @@ module.exports = app => {
       defaultValue: null,
       primaryKey: true,
       autoIncrement: false,
-      comment: "primary key",
+      comment: null,
       field: "id"
     },
     name: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(255),
       allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
-      comment: "user name",
+      comment: null,
       field: "name"
     },
     age: {
@@ -28,7 +28,7 @@ module.exports = app => {
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
-      comment: "user age",
+      comment: null,
       field: "age"
     },
     createdAt: {
@@ -37,7 +37,7 @@ module.exports = app => {
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
-      comment: "created time",
+      comment: null,
       field: "created_at"
     },
     updatedAt: {
@@ -46,7 +46,7 @@ module.exports = app => {
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
-      comment: "updated time",
+      comment: null,
       field: "updated_at"
     }
   };

@@ -25,4 +25,22 @@ module.exports = class BaseController extends Controller {
         ctx.body.data = {};
         ctx.status = 200
     }
+
+    // 验证参数并统一处理错误
+    async validateParams(rule, data) {
+        const { ctx } = this;
+        try {
+            ctx.validate(rule, data);
+            return null;  // 验证通过
+        } catch (error) {
+            // 统一处理验证错误
+            if (error.errors && error.errors.length > 0) {
+                const firstError = error.errors[0];
+                const fieldName = firstError.field;
+                const message = firstError.message;
+                return `${fieldName}${message}`;
+            }
+            return '参数验证失败';
+        }
+    }
 }

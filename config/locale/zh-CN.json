@@ -1,9 +1,22 @@
 {
-	"required": "必须，不能为空",
+	"required": "必填",
 	"missing_field": "字段丢失",
-	"should not be empty": "字段不能为空",
-	"invalid": "失败",
+	"should not be empty": "不能为空",
+	"invalid": "无效",
 	"should be a string": "必须是字符串",
 	"should be an object": "必须是对象",
-	"should be an integer": "必须是整数"
+	"should be an integer": "必须是整数",
+	"should be a number": "必须是数字",
+	"should be a boolean": "必须是布尔值",
+	"should be an array": "必须是数组",
+	"should be an email": "必须是有效的邮箱格式",
+	"should be a url": "必须是有效的URL格式",
+	"should be a date": "必须是有效的日期格式",
+	"should match": "格式不正确",
+	"should be one of": "必须是指定值之一",
+	"should be less than or equal to": "不能大于",
+	"should be greater than or equal to": "不能小于",
+	"length should be": "长度必须是",
+	"min length is": "最小长度为",
+	"max length is": "最大长度为"
 }

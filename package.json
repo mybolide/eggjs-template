@@ -9,11 +9,11 @@
   "dependencies": {
     "biguint-format": "^1.0.2",
     "egg": "^3.17.5",
-    "egg-i18n": "^2.1.1",
     "egg-scripts": "2",
     "egg-sequelize": "^6.0.0",
     "egg-validate": "^2.0.2",
     "flake-idgen": "^1.4.0",
+    "i18n": "^0.15.1",
     "mysql2": "^3.14.1"
   },
   "devDependencies": {

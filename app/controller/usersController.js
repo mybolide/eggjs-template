@@ -42,8 +42,13 @@ class IndexController extends BaseController{
     */
     async create() {
         const { ctx, service } = this
-        ctx.validate(ctx.app.rule.usersForm);
         const payload = ctx.request.body || {}
+        const error = await this.validateParams(ctx.app.rule.usersForm, payload)
+        if(error){
+            this.fail(error)
+            return
+        }
+        
         const flag = await service.usersService.save('Users', payload)
         if(flag){
             this.success({})
