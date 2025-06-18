@@ -1,0 +1,8 @@
+{
+    "name": "egg-auto-router",
+    "version": "1.0.0",
+    "eggPlugin": {
+      "name": "autoRouter"
+    }
+  }
+  

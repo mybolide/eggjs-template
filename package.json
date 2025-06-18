@@ -1,0 +1,47 @@
+{
+  "name": "eggjs-template",
+  "version": "1.0.0",
+  "description": "企业级Egg.js API模板，集成自动代码生成、API文档和智能路由功能",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "biguint-format": "^1.0.2",
+    "egg": "^3.17.5",
+    "egg-i18n": "^2.1.1",
+    "egg-scripts": "2",
+    "egg-sequelize": "^6.0.0",
+    "egg-validate": "^2.0.2",
+    "flake-idgen": "^1.4.0",
+    "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "egg-bin": "6",
+    "egg-mock": "5",
+    "eslint": "8",
+    "eslint-config-egg": "13",
+    "handlebars": "^4.7.8",
+    "sequelize-automate": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-eggjs-template",
+    "stop": "egg-scripts stop --title=egg-server-eggjs-template",
+    "dev": "egg-bin dev",
+    "test": "npm run lint -- --fix && npm run test:local",
+    "test:local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "gen": "sequelize-automate -c automate.config.json && node ./generate/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}

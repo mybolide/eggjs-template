@@ -1,0 +1,11 @@
+{
+    "name": "egg-swagger-lite",
+    "version": "1.0.0",
+    "eggPlugin": {
+        "name": "swaggerLite"
+    },
+    "dependencies": {
+        "koa-send": "^5.0.1",
+        "koa-static": "^5.0.0"
+    }
+}
