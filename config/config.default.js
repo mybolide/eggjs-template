@@ -23,7 +23,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1750057225659_1070';
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = ['errorHandler'];
 
    // CSRF 配置，加入下面这段
   config.security = {

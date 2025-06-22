@@ -13,8 +13,13 @@ class IndexController extends BaseController{
     */
     async list() {
         const { service } = this
-        const data = await service.usersService.list('Users')
-        this.success(data)
+        try {
+            const data = await service.usersService.list('Users')
+            this.success(data)
+        } catch (error) {
+            // 错误会被中间件自动捕获并处理
+            throw error;
+        }
     }
 
     /**
@@ -25,12 +30,25 @@ class IndexController extends BaseController{
     * @Request query integer pageSize eg:10 每页个数
     * @Response 200 JsonResult 操作成功
     */
-
     async page() {
         const { ctx, service } = this
         const query = ctx.query
-        const data = await service.usersService.page('Users', query.pageNum, query.pageSize)
-        this.success(data)
+        
+        // 参数验证
+        if (!query.pageNum || !query.pageSize) {
+            this.throwBusinessError('页码和每页条数不能为空');
+        }
+        
+        if (parseInt(query.pageNum) < 1 || parseInt(query.pageSize) < 1) {
+            this.throwBusinessError('页码和每页条数必须大于0');
+        }
+        
+        try {
+            const data = await service.usersService.page('Users', query.pageNum, query.pageSize)
+            this.success(data)
+        } catch (error) {
+            throw error;
+        }
     }
 
     /**
@@ -43,17 +61,19 @@ class IndexController extends BaseController{
     async create() {
         const { ctx, service } = this
         const payload = ctx.request.body || {}
-        const error = await this.validateParams(ctx.app.rule.usersForm, payload)
-        if(error){
-            this.fail(error)
-            return
-        }
         
-        const flag = await service.usersService.save('Users', payload)
-        if(flag){
-            this.success({})
-        } else {
-            this.fail()
+        // 使用新的参数验证方法
+        await this.validateParams(ctx.app.rule.usersForm, payload)
+        
+        try {
+            const flag = await service.usersService.save('Users', payload)
+            if(flag){
+                this.success({})
+            } else {
+                this.throwBusinessError('用户创建失败')
+            }
+        } catch (error) {
+            throw error;
         }
     }
 
@@ -69,11 +89,27 @@ class IndexController extends BaseController{
         const { ctx, service } = this
         const params = ctx.params
         const payload = ctx.request.body || {}
-        const flag = await service.usersService.update('Users', params.id, payload)
-        if(flag){
-            this.success({})
-        } else {
-            this.fail()
+        
+        // 验证ID是否存在
+        if (!params.id) {
+            this.throwBusinessError('用户ID不能为空');
+        }
+        
+        // 验证用户是否存在
+        const existingUser = await service.usersService.getById('Users', params.id)
+        if (!existingUser) {
+            this.throwNotFoundError('用户不存在');
+        }
+        
+        try {
+            const flag = await service.usersService.update('Users', params.id, payload)
+            if(flag){
+                this.success({})
+            } else {
+                this.throwBusinessError('用户更新失败')
+            }
+        } catch (error) {
+            throw error;
         }
     }
 
@@ -87,11 +123,27 @@ class IndexController extends BaseController{
     async deleteById() {
         const { ctx, service } = this
         const params = ctx.params
-        const flag = await service.usersService.removeById('Users', params.id)
-        if(flag){
-            this.success({})
-        } else {
-            this.fail()
+        
+        // 验证ID是否存在
+        if (!params.id) {
+            this.throwBusinessError('用户ID不能为空');
+        }
+        
+        // 验证用户是否存在
+        const existingUser = await service.usersService.getById('Users', params.id)
+        if (!existingUser) {
+            this.throwNotFoundError('用户不存在');
+        }
+        
+        try {
+            const flag = await service.usersService.removeById('Users', params.id)
+            if(flag){
+                this.success({})
+            } else {
+                this.throwBusinessError('用户删除失败')
+            }
+        } catch (error) {
+            throw error;
         }
     }
 
@@ -105,10 +157,22 @@ class IndexController extends BaseController{
     async getById() {
         const { ctx, service } = this
         const params = ctx.params
-        const data = await service.usersService.getById('Users', params.id)
-        this.success(data)
+        
+        // 验证ID是否存在
+        if (!params.id) {
+            this.throwBusinessError('用户ID不能为空');
+        }
+        
+        try {
+            const data = await service.usersService.getById('Users', params.id)
+            if (!data) {
+                this.throwNotFoundError('用户不存在');
+            }
+            this.success(data)
+        } catch (error) {
+            throw error;
+        }
     }
 }
-
 
 module.exports = IndexController;

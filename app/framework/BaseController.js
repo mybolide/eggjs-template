@@ -1,5 +1,6 @@
 const { Controller } = require('egg');
-const { clearDeep } = require('../utils/common')
+const { clearDeep } = require('../utils/common');
+const { BusinessError, ValidationError, AuthError, NotFoundError } = require('../utils/errorHandler');
 
 module.exports = class BaseController extends Controller {
     success(data = {}, msg) {
@@ -38,9 +39,35 @@ module.exports = class BaseController extends Controller {
                 const firstError = error.errors[0];
                 const fieldName = firstError.field;
                 const message = firstError.message;
-                return `${fieldName}${message}`;
+                throw new ValidationError(`${fieldName}${message}`);
             }
-            return '参数验证失败';
+            throw new ValidationError('参数验证失败');
+        }
+    }
+
+    // 抛出业务错误
+    throwBusinessError(message) {
+        throw new BusinessError(message);
+    }
+
+    // 抛出权限错误
+    throwAuthError(message = '权限不足') {
+        throw new AuthError(message);
+    }
+
+    // 抛出资源不存在错误
+    throwNotFoundError(message = '资源不存在') {
+        throw new NotFoundError(message);
+    }
+
+    // 安全的数据获取方法
+    safeGet(obj, path, defaultValue = null) {
+        try {
+            return path.split('.').reduce((current, key) => {
+                return current && current[key] !== undefined ? current[key] : defaultValue;
+            }, obj);
+        } catch (error) {
+            return defaultValue;
         }
     }
 }
