@@ -1,0 +1,59 @@
+{
+  "name": "eggjs-template",
+  "version": "1.0.0",
+  "description": "企业级Egg.js API模板，集成自动代码生成、API文档和智能路由功能",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "ali-oss": "^6.23.0",
+    "bcryptjs": "^3.0.2",
+    "biguint-format": "^1.0.2",
+    "cos-nodejs-sdk-v5": "^2.16.0-beta.3",
+    "dayjs": "^1.11.13",
+    "egg": "^3.17.5",
+    "egg-cors": "^3.0.1",
+    "egg-multipart": "^3.5.0",
+    "egg-redis": "^2.6.1",
+    "egg-scripts": "2",
+    "egg-sequelize": "^6.0.0",
+    "egg-validate": "^2.0.2",
+    "flake-idgen": "^1.4.0",
+    "i18n": "^0.15.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "egg-bin": "6",
+    "egg-mock": "5",
+    "eslint": "8",
+    "eslint-config-egg": "13",
+    "handlebars": "^4.7.8",
+    "sequelize-automate": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=admin-api --workers=3 --ignore-stderr --port=10882",
+    "start:test": "cross-env EGG_SERVER_ENV=test egg-scripts start --daemon --title=admin-api-test --workers=3 --ignore-stderr --port=20882",
+    "stop": "egg-scripts stop --title=admin-api",
+    "stop:test": "egg-scripts stop --title=admin-api-test",
+    "dev": "cross-env NODE_OPTIONS=\"--no-deprecation\" egg-bin dev --port=10882",
+    "test": "npm run lint -- --fix && npm run test:local",
+    "test:local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "gen": "sequelize-automate -c automate.config.json && node ./generate/index.js",
+    "updateMysql": "sequelize-automate -c automate.config.json && node ./generate/updateMysql.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}

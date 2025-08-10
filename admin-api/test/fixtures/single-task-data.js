@@ -1,0 +1,50 @@
+'use strict';
+
+// Single task test data for task ID: 3149895652775821312
+module.exports = {
+  taskData: {
+    id: '3149895652775821312',
+    visitDate: '2025-6-27',
+    startTime: '08:30:00',
+    endTime: '12:45:00',
+    currentStageId: 'stage_006',
+    summaryOfActivities: 'Conducted final pre-harvest assessment of crop maturity. Evaluated leaf development, checked readiness for reaping, and planned storage methods. Overall crop condition appears ready for harvest with good leaf maturity.',
+    statusIndicator: 'green',
+    descriptionOfChallenges: 'Some variability in leaf maturity across different sections of the field. Need to ensure proper timing for optimal harvest quality.',
+    recommendedActions: 'Proceed with harvest in mature sections first. Implement planned storage method with proper ventilation. Monitor remaining sections for 3-5 days before harvesting.',
+    previousReportActedOn: 1,
+    photos: 'https://farm-photos.example.com/task_3149895652775821312_001.jpg,https://farm-photos.example.com/task_3149895652775821312_002.jpg',
+    latitude: '40.7128',
+    longitude: '-74.0060',
+    stageQuestionsAnswers: [
+      {
+        taskId: '3149895652775821312',
+        stageId: 'stage_006',
+        questionId: 'q_006_001',
+        question: 'Number of leaves per plant (approx)?',
+        answerValue: '12'
+      },
+      {
+        taskId: '3149895652775821312',
+        stageId: 'stage_006',
+        questionId: 'q_006_002',
+        question: 'Are leaves mature and correctly timed for reaping?',
+        answerValue: 'Yes'
+      },
+      {
+        taskId: '3149895652775821312',
+        stageId: 'stage_006',
+        questionId: 'q_006_003',
+        question: 'Storage method after reaping?',
+        answerValue: 'Covered warehouse storage with natural ventilation and moisture control'
+      },
+      {
+        taskId: '3149895652775821312',
+        stageId: 'stage_006',
+        questionId: 'q_006_004',
+        question: 'Recommendations',
+        answerValue: 'Harvest mature sections immediately, implement quality control measures during storage, monitor humidity levels'
+      }
+    ]
+  }
+}; 

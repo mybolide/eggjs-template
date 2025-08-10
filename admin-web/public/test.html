@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP ScrollTrigger Parallax</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        background-size: cover;
+        background-position: center;
+      }
+
+      section:nth-child(1) {
+        background-image: url("./1.png");
+      }
+
+      section:nth-child(2) {
+        background-image: url("./1.png");
+      }
+
+      section:nth-child(3) {
+        background-image: url("./1.png");
+      }
+
+      section:nth-child(4) {
+        background-image: url("./1.png");
+      }
+
+      section:nth-child(5) {
+        background-image: url("./1.png");
+      }
+
+      section:nth-child(6) {
+        background-image: url("./1.png");
+      }
+
+      section:nth-child(7) {
+        background-image: url("./1.png");
+      }
+
+      section:nth-child(8) {
+        background-image: url("./1.png");
+      }
+
+      h1 {
+        font-size: 120px;
+        margin: auto;
+        color: rgb(207, 23, 23);
+      }
+
+      /*# sourceMappingURL=style.css.map */
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Good morning!</h1>
+    </section>
+    <section>
+      <h1>Good afternoon!</h1>
+    </section>
+    <section>
+      <h1>Good evening!</h1>
+    </section>
+    <section>
+      <h1>How are you?</h1>
+    </section>
+    <section>
+      <h1>Nice to meet you.</h1>
+    </section>
+    <section>
+      <h1>It's nice to see you.</h1>
+    </section>
+    <section>
+      <h1>Long time no see.</h1>
+    </section>
+    <section>
+      <h1>How's it going?</h1>
+    </section>
+
+    <!-- 引入GSAP和ScrollTrigger插件 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+    <script>
+      // 使用GSAP的ScrollTrigger插件来创建视差效果
+      const sections = document.querySelectorAll("section");
+      gsap.registerPlugin(ScrollTrigger); // 注册插件
+      sections.forEach((section) => {
+        gsap.fromTo(
+          section,
+          { backgroundPositionY: `-${window.innerHeight / 2}px` },
+          {
+            backgroundPositionY: `${window.innerHeight / 2}px`,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              scrub: true,
+            },
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

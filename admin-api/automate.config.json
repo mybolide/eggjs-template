@@ -1,0 +1,20 @@
+{
+  "dbOptions": {
+    "database": "fz-agronomist-field-visit-system",
+    "username": "root",
+    "password": "bolide01020096",
+    "dialect": "mysql",
+    "host": "115.28.150.32",
+    "port": 3306,
+    "logging": false
+  },
+  "options": {
+    "type": "egg",
+    "dir": "app/model",
+    "fileNameCamelCase": true,
+    "camelCase": true,
+    "tables": ["visit_report_answers"],
+    "prefix": [""],
+    "serviceName": ["访问报告答案表"]
+  }
+}

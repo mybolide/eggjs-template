@@ -1,0 +1,1 @@
+module.exports = ['id', 'createdAt', 'createdBy', 'updatedAt', 'deletedAt', 'updatedBy']

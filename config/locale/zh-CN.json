@@ -1,9 +1,0 @@
-{
-	"required": "必须，不能为空",
-	"missing_field": "字段丢失",
-	"should not be empty": "字段不能为空",
-	"invalid": "失败",
-	"should be a string": "必须是字符串",
-	"should be an object": "必须是对象",
-	"should be an integer": "必须是整数"
-}

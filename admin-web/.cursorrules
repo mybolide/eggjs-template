@@ -1,0 +1,250 @@
+# Vue.js 管理后台项目 Cursor Rules
+
+## 项目概述
+这是一个基于Vue 2.7 + Element UI + Tailwind CSS + Vite的管理后台系统，包含用户认证、数据管理等功能。
+
+## 技术栈
+- **前端框架**: Vue 2.7 (Options API)
+- **UI库**: Element UI 2.15+
+- **样式**: Tailwind CSS 3.x + 自定义CSS
+- **构建工具**: Vite 3.x
+- **状态管理**: Vuex 3.x
+- **路由**: Vue Router 2.x
+- **HTTP客户端**: Axios
+- **工具库**: dayjs, js-md5, js-cookie等
+
+## 代码风格规范
+
+### Vue组件规范
+1. **单文件组件结构**:
+   ```vue
+   <template>
+     <!-- HTML模板 -->
+   </template>
+
+   <script>
+   // JavaScript逻辑
+   export default {
+     name: 'ComponentName',
+     // ...
+   }
+   </script>
+
+   <style scoped>
+   /* 组件样式 */
+   </style>
+   ```
+
+2. **命名规范**:
+   - 组件名使用PascalCase: `UserProfile.vue`
+   - 组件实例名使用PascalCase: `name: 'UserProfile'`
+   - prop名使用camelCase: `userName`
+   - 事件名使用kebab-case: `@user-login`
+
+3. **Vue Options API 顺序**:
+   ```javascript
+   export default {
+     name: '',
+     components: {},
+     props: {},
+     data() {},
+     computed: {},
+     watch: {},
+     created() {},
+     mounted() {},
+     methods: {},
+     destroyed() {}
+   }
+   ```
+
+### Element UI 使用规范
+1. **表单组件**:
+   - 始终使用`el-form`包装表单
+   - 为每个表单项提供验证规则
+   - 使用`ref`属性便于表单验证
+   
+2. **表格组件**:
+   - 使用`el-table`展示数据
+   - 为操作列设置固定宽度
+   - 合理使用分页组件`el-pagination`
+
+3. **消息提示**:
+   - 成功操作: `this.$message.success()`
+   - 错误提示: `this.$message.error()`
+   - 确认对话框: `this.$confirm()`
+
+### 样式规范
+1. **CSS类名**:
+   - 使用kebab-case: `.login-container`
+   - BEM方法论: `.block__element--modifier`
+   
+2. **Tailwind CSS**:
+   - 优先使用Tailwind工具类
+   - 自定义样式写在`<style scoped>`中
+   
+3. **响应式设计**:
+   - 移动端优先
+   - 使用Tailwind断点: `sm:`, `md:`, `lg:`, `xl:`
+
+### JavaScript规范
+1. **变量命名**:
+   - 使用camelCase: `loginForm`, `userInfo`
+   - 常量使用UPPER_SNAKE_CASE: `API_BASE_URL`
+   
+2. **函数命名**:
+   - 使用动词开头: `handleLogin`, `validateForm`
+   - 布尔值函数使用is/has开头: `isLoading`, `hasPermission`
+
+### API调用规范
+1. **统一使用Axios实例**
+2. **错误处理**:
+   ```javascript
+   this.$api.login(data).then(res => {
+     // 成功处理
+   }).catch(err => {
+     this.$message.error('登录失败')
+   })
+   ```
+
+### 路由规范
+1. **路由路径使用kebab-case**: `/user-management`
+2. **路由组件懒加载**: `component: () => import('@/views/User.vue')`
+3. **路由守卫处理权限验证**
+
+### 文件组织规范
+```
+src/
+├── api/           # API接口
+├── assets/        # 静态资源
+├── components/    # 公共组件
+├── config/        # 配置文件
+├── directive/     # 自定义指令
+├── icons/         # 图标
+├── router/        # 路由配置
+├── store/         # Vuex状态管理
+├── styles/        # 全局样式
+├── utils/         # 工具函数
+└── views/         # 页面组件
+```
+
+### 性能优化规范
+1. **组件懒加载**: 使用`() => import()`
+2. **图片优化**: 使用适当格式和大小
+3. **列表渲染**: 正确使用`v-for`的`key`属性
+4. **计算属性**: 优先使用computed而非methods
+
+### 安全规范
+1. **XSS防护**: 避免使用`v-html`，使用`v-text`
+2. **敏感信息**: 不在前端存储敏感数据
+3. **权限验证**: 前端和后端双重验证
+
+### 测试规范
+1. **关键功能测试**: 登录、权限、数据提交
+2. **边界情况处理**: 空数据、网络错误
+3. **用户体验**: 加载状态、错误提示
+
+### 代码注释规范
+1. **复杂逻辑添加注释**
+2. **API接口注释参数和返回值**
+3. **组件props添加类型和默认值说明**
+
+### 版本控制规范
+1. **提交信息格式**: `feat: 添加用户登录功能`
+2. **分支命名**: `feature/user-login`, `bugfix/form-validation`
+3. **代码审查**: 重要功能需要代码审查
+
+## 常用代码模板
+
+### 页面组件模板
+```vue
+<template>
+  <div class="page-container">
+    <el-card>
+      <div slot="header">
+        <span>页面标题</span>
+      </div>
+      <!-- 页面内容 -->
+    </el-card>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'PageName',
+  data() {
+    return {
+      loading: false,
+      tableData: []
+    }
+  },
+  created() {
+    this.fetchData()
+  },
+  methods: {
+    async fetchData() {
+      this.loading = true
+      try {
+        const res = await this.$api.getData()
+        this.tableData = res.data
+      } catch (error) {
+        this.$message.error('获取数据失败')
+      } finally {
+        this.loading = false
+      }
+    }
+  }
+}
+</script>
+
+<style scoped>
+.page-container {
+  padding: 20px;
+}
+</style>
+```
+
+### 表单组件模板
+```vue
+<template>
+  <el-form
+    ref="form"
+    :model="form"
+    :rules="rules"
+    label-width="100px">
+    <el-form-item label="字段名" prop="fieldName">
+      <el-input v-model="form.fieldName" />
+    </el-form-item>
+    <el-form-item>
+      <el-button type="primary" @click="handleSubmit">提交</el-button>
+    </el-form-item>
+  </el-form>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      form: {
+        fieldName: ''
+      },
+      rules: {
+        fieldName: [
+          { required: true, message: '请输入字段名', trigger: 'blur' }
+        ]
+      }
+    }
+  },
+  methods: {
+    handleSubmit() {
+      this.$refs.form.validate(valid => {
+        if (valid) {
+          // 提交逻辑
+        }
+      })
+    }
+  }
+}
+</script>
+```
+
+遵循这些规范可以确保代码的一致性、可维护性和团队协作效率。 

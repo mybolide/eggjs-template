@@ -1,0 +1,266 @@
+# Egg.js 企业级模板项目 - Cursor Rules
+
+## 项目概述
+这是一个企业级 Egg.js API 模板项目，集成了自动代码生成、API 文档和智能路由功能。
+
+## 技术栈
+- **框架**: Egg.js 3.x
+- **数据库**: MySQL + Sequelize ORM
+- **Node.js**: >= 18.0.0
+- **验证**: egg-validate
+- **国际化**: i18n
+- **代码生成**: sequelize-automate + 自定义模板
+
+## 项目结构规范
+
+### 目录结构
+```
+app/
+├── contract/          # 数据验证合约
+├── controller/        # 控制器
+├── framework/         # 基础框架类
+├── middleware/        # 中间件
+├── model/            # 数据模型
+├── service/          # 业务逻辑服务
+├── utils/            # 工具函数
+└── router.js         # 路由配置
+
+config/               # 配置文件
+├── config.default.js
+├── plugin.js
+└── locale/           # 国际化文件
+
+generate/             # 代码生成工具
+├── templates/        # 代码模板
+└── utils/           # 生成工具
+
+plugin/              # 自定义插件
+├── egg-auto-router/ # 自动路由插件
+└── egg-swagger-lite/ # API文档插件
+```
+
+## 编码规范
+
+### 1. 控制器 (Controller)
+- 所有控制器必须继承 `BaseController`
+- 使用 `success()` 和 `fail()` 方法返回统一格式的响应
+- 使用 `validateParams()` 进行参数验证
+- 错误处理使用 `throwBusinessError()`, `throwAuthError()`, `throwNotFoundError()`
+
+```javascript
+// 正确示例
+class UsersController extends BaseController {
+  async create() {
+    const { ctx } = this;
+    
+    // 参数验证
+    await this.validateParams(ctx.rule.usersForm, ctx.request.body);
+    
+    try {
+      const result = await ctx.service.users.create(ctx.request.body);
+      this.success(result, '用户创建成功');
+    } catch (error) {
+      this.throwBusinessError('用户创建失败');
+    }
+  }
+}
+```
+
+### 2. 服务 (Service)
+- 所有服务必须继承 `BaseService`
+- 业务逻辑封装在服务层
+- 使用 Sequelize 进行数据库操作
+
+```javascript
+// 正确示例
+class UsersService extends BaseService {
+  async create(userData) {
+    const { ctx } = this;
+    return await ctx.model.Users.create(userData);
+  }
+}
+```
+
+### 3. 数据验证合约 (Contract)
+- 使用 egg-validate 进行参数验证
+- 合约文件放在 `app/contract/` 目录
+- 支持国际化错误消息
+
+```javascript
+// 正确示例
+module.exports = {
+  usersForm: {
+    name: { type: 'string', required: true, message: '用户名不能为空' },
+    email: { type: 'email', required: true, message: '邮箱格式不正确' }
+  }
+};
+```
+
+### 4. 错误处理
+- 使用统一的错误处理中间件
+- 自定义错误类型：`BusinessError`, `ValidationError`, `AuthError`, `NotFoundError`
+- 错误消息支持国际化
+
+### 5. 路由规范
+- 使用自动路由插件，无需手动配置路由
+- 控制器方法名对应 HTTP 方法：
+  - `index()` -> GET /resource
+  - `show()` -> GET /resource/:id
+  - `create()` -> POST /resource
+  - `update()` -> PUT /resource/:id
+  - `destroy()` -> DELETE /resource/:id
+
+## 代码生成规范
+
+### 使用代码生成工具
+```bash
+npm run gen  # 根据数据库表结构生成 Controller、Service、Contract
+```
+
+### 生成的文件结构
+- **Contract**: 基于数据库字段生成验证规则
+- **Controller**: 标准 CRUD 操作
+- **Service**: 数据库操作封装
+
+## 开发最佳实践
+
+### 1. 数据库操作
+- 使用 Sequelize ORM
+- 模型定义在 `app/model/` 目录
+- 使用事务处理复杂操作
+
+### 2. 国际化
+- 错误消息支持中英文
+- 配置文件：`config/locale/zh-CN.json`, `config/locale/en-US.json`
+- 默认语言：中文
+
+### 3. 配置管理
+- 环境配置放在 `config/` 目录
+- 使用 `config.default.js` 作为基础配置
+- 敏感信息使用环境变量
+
+### 4. 测试
+- 测试文件放在 `test/` 目录
+- 使用 egg-mock 进行测试
+- 运行测试：`npm test`
+
+## 插件使用
+
+### 自动路由插件 (egg-auto-router)
+- 自动根据控制器生成路由
+- 支持 RESTful 风格
+- 配置文件：`plugin/egg-auto-router/`
+
+### API 文档插件 (egg-swagger-lite)
+- 自动生成 Swagger 文档
+- 访问地址：`/swagger-ui`
+- 配置文件：`plugin/egg-swagger-lite/`
+
+## 命名约定
+
+### 文件命名
+- 控制器：`xxxController.js`
+- 服务：`xxxService.js`
+- 模型：`xxx.js` (小写)
+- 合约：`xxxForm.js`
+
+### 变量命名
+- 使用 camelCase
+- 常量使用 UPPER_SNAKE_CASE
+- 类名使用 PascalCase
+
+## 错误处理规范
+
+### 统一错误响应格式
+```javascript
+{
+  code: 0,        // 0: 失败, 1: 成功
+  msg: "错误消息",
+  data: {}
+}
+```
+
+### 自定义错误类型
+- `BusinessError`: 业务逻辑错误
+- `ValidationError`: 参数验证错误
+- `AuthError`: 权限错误
+- `NotFoundError`: 资源不存在错误
+
+## 性能优化
+
+### 1. 数据库查询
+- 使用索引优化查询
+- 避免 N+1 查询问题
+- 使用分页查询大数据集
+
+### 2. 缓存策略
+- 合理使用缓存
+- 静态资源缓存
+- 数据库查询结果缓存
+
+## 安全规范
+
+### 1. 输入验证
+- 所有用户输入必须验证
+- 使用 egg-validate 进行参数验证
+- 防止 SQL 注入
+
+### 2. 权限控制
+- 实现用户认证和授权
+- 使用中间件进行权限检查
+- 敏感操作需要权限验证
+
+### 3. CSRF 防护
+- 根据需要启用 CSRF 防护
+- API 接口可以禁用 CSRF
+
+## 部署规范
+
+### 1. 环境配置
+- 开发环境：`npm run dev`
+- 生产环境：`npm start`
+- 停止服务：`npm stop`
+
+### 2. 日志管理
+- 日志文件存放在 `logs/` 目录
+- 使用 Egg.js 内置日志系统
+- 生产环境启用日志轮转
+
+## 代码审查检查点
+
+1. **控制器层**：是否继承 BaseController，是否使用统一的响应格式
+2. **服务层**：是否继承 BaseService，业务逻辑是否合理封装
+3. **参数验证**：是否使用合约进行参数验证
+4. **错误处理**：是否使用统一的错误处理机制
+5. **数据库操作**：是否使用 Sequelize ORM，是否考虑事务
+6. **国际化**：错误消息是否支持国际化
+7. **测试覆盖**：是否编写了相应的测试用例
+8. **性能考虑**：是否考虑了查询性能和缓存策略
+
+## 常用命令
+
+```bash
+# 开发
+npm run dev
+
+# 测试
+npm test
+
+# 代码检查
+npm run lint
+
+# 代码生成
+npm run gen
+
+# 生产部署
+npm start
+npm stop
+```
+
+## 注意事项
+
+1. 所有新功能开发前先运行代码生成工具
+2. 遵循 RESTful API 设计规范
+3. 保持代码的一致性和可维护性
+4. 及时更新文档和注释
+5. 定期进行代码审查和重构 
